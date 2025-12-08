@@ -1,3 +1,85 @@
+ .wrrapper {
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+ }
+ 
  /* ===============================================
   XXXXXX
  =============================================== */
+.recipe_row {
+  display: flex;
+  
+  justify-content: space-between;
+}
+
+ /* ===============================================
+  メインビジュアル
+ =============================================== */
+.recipe_detail_image_item {
+    flex:1;
+    height: 70rem;
+    display: block;
+}
+
+ /* ===============================================
+ タイトル、説明文、材料 
+ =============================================== */
+.recipe_detail_main_item {
+    flex:1;
+    height: 70rem;
+    
+
+}
+
+/* ひよこ豆とアボガドのタコス */
+.recipe_detail_title {
+    display: block;
+    font-size: 2.6rem;
+    font-weight: bold;
+    margin: 3.6rem 0 1.3rem;
+    border: 1px solid #000;
+    text-align: center;
+}
+    
+/* ひよこ豆とアボガドのタコス */
+.recipe_detail_discription {
+    width: 36.1rem;
+    display: block;
+    font-size: 1.6rem;
+
+    margin: 0 auto 3.4rem ;
+    border: 1px solid #000;
+    text-align: center;
+}
+
+ /* ===============================================
+ 材料
+ =============================================== */
+
+.recipe_material_title{
+    padding-left: 6rem;
+    font-size: 2rem;
+    margin-bottom: 2.2rem;
+}
+
+.recipe_material_card {
+    width: 100%;
+}
+
+.recipe_material_item {
+    display: flex;
+    font-size: 1.6rem;
+    justify-content: space-between;
+    padding-left:6rem;
+    border-bottom: 1px solid #ccc;
+}
+
+.recipe_material_item dt {
+    text-align: left;
+    width: 9.4rem;
+}
+
+.recipe_material_item dd {
+    text-align: right;
+}
