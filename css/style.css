@@ -3,7 +3,8 @@ Theme Name:
 */
 
 html {
-  font-size: calc(10 / 1280 * 100vw);
+  /* font-size: calc(10 / 1280 * 100vw); */
+  font-size: calc(10 / 1200 * 100vw); 
   /* 画面幅1280pxで10px*/
 
 }
