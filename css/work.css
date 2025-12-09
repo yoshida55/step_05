@@ -37,6 +37,7 @@
 .recipe_detail_title {
   /* width: 28.6rem; */
   display: block;
+  height: 3.7rem;
   font-size: 2.8rem;
   letter-spacing: 0;
   font-weight: bold;
@@ -46,24 +47,32 @@
   padding: 0;
 }
 
-/* ひよこ豆とアボガドのタコス */
+/* ひよこ豆とアボガドのタコス  説明*/
 .recipe_detail_discription {
-  width: 36.1rem;
+  width: 48rem; /*60rem - (6rem + 6rem)*/
+  height: 4.5rem;
+  margin: 0 auto;
+
   display: block;
   font-size: 1.6rem;
 
-  margin: 0 auto 3.4rem;
   text-align: left;
+  margin-bottom: 3.4rem;
 }
 
 /* ===============================================
  材料
  =============================================== */
+.recipe_detail_main_item {
+  margin-bottom: 10rem;
+}
 
 /* タイトル　材料(二人分) */
 .recipe_material_title {
   width: 48rem; /*60rem - (6rem + 6rem)*/
+  height: 2.7rem;
   margin: 0 auto;
+  font-weight: bold;
   font-size: 2rem;
   margin-bottom: 2.2rem;
   border-bottom: 1px solid #ccc;
@@ -79,7 +88,9 @@
   display: flex;
   justify-content: space-between;
 
+  font-size: 1.6rem;
   border-bottom: 1px solid #ccc;
+  margin-bottom: 0.7rem;
 
   /* border: 1px solid #000; */
 }
@@ -92,7 +103,9 @@
 .recipe_how_make_title {
   width: 48rem; /*60rem - (6rem + 6rem)*/
   margin: 0 auto;
+  height: 2.7rem;
   font-size: 2rem;
+  font-weight: bold;
   margin-bottom: 2.2rem;
   border-bottom: 1px solid #ccc;
 }
@@ -110,11 +123,18 @@
 
 .recipe_how_make_item {
   border-bottom: 1px solid #ccc;
+  height: 2.1rem;
+  margin-bottom: 0.8rem;
+  font-size: 1.6rem;
 }
 
 /* ===============================================
  レシピ一覧を見る
  =============================================== */
+.recipe_List_erea {
+  margin-bottom: 10rem;
+}
+
 .recipe_List_lines {
   width: 23.2rem;
   height: 5rem;
@@ -131,4 +151,27 @@
 .recipe_List_word_link {
   font-size: 1.4rem;
   color: #000;
+}
+
+/* ===============================================
+ フッター
+ =============================================== */
+
+.footer_sns_list {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer_sns_link {
+  font-size: 1.2rem;
+  color: #000;
+  height: 1.4rem;
+  border-bottom: 2px solid #ccc;
+}
+
+.footer_copyright {
+  text-align: center;
+  font-size: 1.2rem;
 }
