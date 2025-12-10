@@ -23,6 +23,8 @@
   flex: 1;
   height: 70rem;
   display: block;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* ===============================================
@@ -31,6 +33,7 @@
 .recipe_detail_main_item {
   flex: 1;
   height: 70rem;
+  margin-right: 2.1rem;
 }
 
 /* ひよこ豆とアボガドのタコス */
@@ -61,26 +64,31 @@
 }
 
 /* ===============================================
- 材料
+ 材料（2人分） & 作り方 共通
  =============================================== */
-.recipe_detail_main_item {
-  margin-bottom: 10rem;
+.recipe_material_container {
+  width: 51.9rem; /*51.9rem - (6rem + 2.1rem)*/
+  margin-right: 2.1rem;
+  margin-left: 6rem;
 }
+
+/* ===============================================
+ 材料（2人分）
+ =============================================== */
 
 /* タイトル　材料(二人分) */
 .recipe_material_title {
-  width: 48rem; /*60rem - (6rem + 6rem)*/
   height: 2.7rem;
-  margin: 0 auto;
+
   font-weight: bold;
   font-size: 2rem;
   margin-bottom: 2.2rem;
+
   border-bottom: 1px solid #ccc;
 }
 
 .recipe_material_card {
-  width: 48rem; /*60rem - (6rem + 6rem)*/
-  margin: 0 auto;
+  width: 51.9rem; /*51.9rem - (6rem + 2.1rem)*/
   margin-bottom: 4rem;
 }
 
@@ -88,6 +96,7 @@
   display: flex;
   justify-content: space-between;
 
+  height: 2.1rem;
   font-size: 1.6rem;
   border-bottom: 1px solid #ccc;
   margin-bottom: 0.7rem;
@@ -101,24 +110,21 @@
 
 /* タイトル　作り方 */
 .recipe_how_make_title {
-  width: 48rem; /*60rem - (6rem + 6rem)*/
-  margin: 0 auto;
   height: 2.7rem;
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 2.2rem;
+  margin-bottom: 2rem;
   border-bottom: 1px solid #ccc;
 }
 
 .recipe_how_make_card {
-  width: 46rem; /*ここは連番の要素数値から、メイン画像のサイズがはかれてないため、暫定の数値*/
-  margin: 0 auto;
   margin-bottom: 4rem;
 }
 
 .recipe_how_make_list {
   border-bottom: 1px solid #ccc;
   list-style: decimal; /* 連番を表示 */
+  padding-left: 1.5rem; /* ✅ これを追加 */
 }
 
 .recipe_how_make_item {
@@ -126,6 +132,10 @@
   height: 2.1rem;
   margin-bottom: 0.8rem;
   font-size: 1.6rem;
+}
+
+.recipe_how_make_item:last-child {
+  margin-bottom: 0rem;
 }
 
 /* ===============================================
