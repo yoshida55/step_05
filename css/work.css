@@ -23,6 +23,8 @@
   flex: 1;
   height: 70rem;
   display: block;
+  width: 100%;
+  object-fit: cover;
 }
 
 /* ===============================================
@@ -31,6 +33,7 @@
 .recipe_detail_main_item {
   flex: 1;
   height: 70rem;
+  margin-right: 2.1rem;
 }
 
 /* ひよこ豆とアボガドのタコス */
@@ -61,26 +64,31 @@
 }
 
 /* ===============================================
- 材料
+ 材料（2人分） & 作り方 共通
  =============================================== */
-.recipe_detail_main_item {
-  margin-bottom: 10rem;
+.recipe_material_container {
+  width: 51.9rem; /*51.9rem - (6rem + 2.1rem)*/
+  margin-right: 2.1rem;
+  margin-left: 6rem;
 }
+
+/* ===============================================
+ 材料（2人分）
+ =============================================== */
 
 /* タイトル　材料(二人分) */
 .recipe_material_title {
-  width: 48rem; /*60rem - (6rem + 6rem)*/
   height: 2.7rem;
-  margin: 0 auto;
+
   font-weight: bold;
   font-size: 2rem;
   margin-bottom: 2.2rem;
+
   border-bottom: 1px solid #ccc;
 }
 
 .recipe_material_card {
-  width: 48rem; /*60rem - (6rem + 6rem)*/
-  margin: 0 auto;
+  width: 51.9rem; /*51.9rem - (6rem + 2.1rem)*/
   margin-bottom: 4rem;
 }
 
@@ -88,6 +96,7 @@
   display: flex;
   justify-content: space-between;
 
+  height: 2.1rem;
   font-size: 1.6rem;
   border-bottom: 1px solid #ccc;
   margin-bottom: 0.7rem;
@@ -107,8 +116,6 @@
 
 /* タイトル　作り方 */
 .recipe_how_make_title {
-  width: 48rem; /*60rem - (6rem + 6rem)*/
-  margin: 0 auto;
   height: 2.7rem;
   font-size: 2rem;
   font-weight: bold;
@@ -117,13 +124,12 @@
 }
 
 .recipe_how_make_card {
-  width: 46rem; /*ここは連番の要素数値から、メイン画像のサイズがはかれてないため、暫定の数値*/
-  margin: 0 auto;
   margin-bottom: 4rem;
 }
 
 .recipe_how_make_list {
   list-style: decimal; /* 連番を表示 */
+  padding-left: 1.5rem; /* ✅ これを追加 */
 }
 
 .recipe_how_make_item {
@@ -134,7 +140,8 @@
 }
 
 .recipe_how_make_item:last-child {
-  margin-bottom: 0;
+
+  margin-bottom: 0rem;
 }
 
 /* ===============================================
@@ -183,4 +190,92 @@
 .footer_copyright {
   text-align: center;
   font-size: 1.2rem;
+}
+
+/* ===============================================
+ ★　レスポンシブ　★　
+ =============================================== */
+
+@media screen and (max-width: 376px) {
+  .wrapper {
+    width: 37.5rem;
+  }
+  .recipe_row {
+    display: block;
+    /* justify-content: column; */
+  }
+
+  /* レスポンシブ　メインビジュアル画像 */
+  .recipe_detail_image_item {
+    flex: none;
+    height: 46.9rem;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /* レスポンシブ　タイトル、説明文、材料ーレシピ一覧まで */
+  .recipe_detail_erea {
+    margin-bottom: 6.5rem;
+  }
+
+  /* ===============================================
+  ★　レスポンシブ　★　タイトル、説明文、材料 
+ =============================================== */
+
+  /* レスポンシブ　タイトル、説明文、材料ーレシピ一覧まで */
+  /* recipe_rowからフレックスでうける */
+  .recipe_detail_main_item {
+    display: block;
+    height: 80rem; /* ★★　暫定　高さ固定  ーレシピ一覧まで*/
+    width: 100%; /* ★★　暫定　幅固定  ーレシピ一覧まで*/
+  }
+
+  /* ひよこ豆とアボガドのタコス */
+  .recipe_detail_title {
+    font-size: 2.8rem;
+    text-align: left;
+    height: 8rem;
+    /* padding-right: 9.12rem; */
+    margin-bottom: 1.3rem;
+  }
+
+  /* ひよこ豆とアボガドのタコス  説明*/
+  /* ひよこ豆とアボガドのタコス  説明*/
+  .recipe_detail_discription {
+    font-size: 1.6rem;
+    padding-right: 9.12rem;
+    height: 9rem;
+    margin: 0 auto;
+
+    width: 100%; /* ★★　暫定　幅固定  ーレシピ一覧まで*/
+    display: block;
+    font-size: 1.6rem;
+
+    text-align: left;
+    margin-bottom: 3.4rem;
+  }
+
+  /* ===============================================
+ 材料（2人分） & 作り方 共通
+ =============================================== */
+  .recipe_material_container {
+    width: 100%;
+
+    margin-left: 0;
+    width: 33.6rem; /*(375px-18.75px-19.75px)margin: 0 auto;*/
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  recipe_material_card {
+    width: 33.6rem; /*(375px-18.75px-19.75px)margin: 0 auto;*/
+    text-align: left;
+  }
+
+  /* タイトル　材料(二人分) */
+  .recipe_material_title {
+    width: 100%;
+    font-weight: bold;
+  }
 }
