@@ -69,7 +69,7 @@
  =============================================== */
 .recipe_material_container {
   width: 51.9rem; /*51.9rem - (6rem + 2.1rem)*/
-  margin-right: 2.1rem;
+  /* margin-right: 2.1rem; */
   margin-left: 6rem;
 }
 
@@ -141,7 +141,6 @@
 }
 
 .recipe_how_make_item:last-child {
-
   margin-bottom: 0rem;
 }
 
@@ -229,7 +228,7 @@
   .recipe_detail_main_item {
     display: block;
     height: auto;
-    width: 100%; 
+    width: 100%;
   }
 
   /* ひよこ豆とアボガドのタコス */
@@ -261,20 +260,18 @@
   .recipe_material_container {
     margin-left: 1.875rem;
     margin-right: 1.975rem;
-    width: 33.6rem; /*(375px-18.75px-19.75px)margin: 0 auto;*/
+    width: calc(100% - 1.875rem - 1.975rem); /* 自動計算 ✅ */
   }
 
   .recipe_material_card {
     width: 100%; /*(375px-18.75px-19.75px)margin: 0 auto;*/
-    /* 19.75pxが右のマージン、18.75pxが左のマージン  */
-/*    
-    text-align: left; */
   }
 
   /* タイトル　材料(二人分) */
   .recipe_material_title {
     width: 100%;
     font-weight: bold;
+    width: calc(100% - 1.875rem - 1.975rem);
   }
 }
 
