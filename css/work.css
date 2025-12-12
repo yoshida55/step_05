@@ -5,7 +5,7 @@
 }
 
 /* ===============================================
-  XXXXXX
+  共通
  =============================================== */
 .recipe_row {
   display: flex;
@@ -38,7 +38,6 @@
 
 /* ひよこ豆とアボガドのタコス */
 .recipe_detail_title {
-  /* width: 28.6rem; */
   display: block;
   height: 3.7rem;
   font-size: 2.8rem;
